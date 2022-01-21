@@ -7,7 +7,7 @@ An example of gitfiti in the wild:
 
 `gitfiti.py` is a tool to decorate your github account's commit history calendar by (blatantly) abusing git's ability to accept commits _in the past_.
 
-How? `gitfiti.py` generates a script (powershell or bash) that makes commits with the GIT_AUTHOR_DATE and GIT_COMMITTER_DATE environment variables set for each targeted pixel.
+How? `gitfiti.py` generates a script (powershell or bash) that makes commits with the `GIT_AUTHOR_DATE` and `GIT_COMMITTER_DATE` environment variables set for each targeted pixel.
 
 Since this is likely to clobber repo's history, it is highly recommend that you create a _new_ github repo when using gitfiti. Also, the generated script assumes you are using public-key authentication with git.
 

@@ -373,15 +373,15 @@ def fake_it(image, start_date, username, repo, git_url, shell, offset=0, multipl
         'REPO={0}\n'
         'git init $REPO\n'
         'cd $REPO\n'
-        'touch README.md\n'
-        'git add README.md\n'
+        'touch readme.md\n'
+        'git add readme.md\n'
         'touch gitfiti\n'
         'git add gitfiti\n'
         '{1}\n'
         'git branch -M main\n'
-        'git remote add origin {2}:{3}/$REPO.git\n'
+        'git remote add origin https://github.com/{3}/$REPO.git\n\n'
         'git pull origin main\n'
-        'git push -u origin main\n'
+        'git push --force -u origin main\n'
     )
 
     template_powershell = (
@@ -389,15 +389,15 @@ def fake_it(image, start_date, username, repo, git_url, shell, offset=0, multipl
         '$REPO="{0}"\n'
         'git init $REPO\n'
         'cd $REPO\n'
-        'New-Item README.md -ItemType file | Out-Null\n'
-        'git add README.md\n'
+        'New-Item readme.md -ItemType file | Out-Null\n'
+        'git add readme.md\n'
         'New-Item gitfiti -ItemType file | Out-Null\n'
         'git add gitfiti\n'
         '{1}\n'
         'git branch -M main\n'
-        'git remote add origin {2}:{3}/$REPO.git\n'
+        'git remote add origin https://github.com/{3}/$REPO.git\n'
         'git pull origin main\n'
-        'git push -u origin main\n'
+        'git push --force -u origin main\n'
     )
 
     template = template_bash if shell == 'bash' else template_powershell
