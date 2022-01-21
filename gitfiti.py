@@ -184,6 +184,16 @@ HEART_SHINY = [
   [0,0,0,4,0,0,0],
 ]
 
+CREEPER = [
+   [2,3,2,1,3,2,3,2],
+   [2,4,4,2,2,4,4,1],
+   [1,4,4,2,3,4,4,2],
+   [3,2,1,4,4,2,2,3],
+   [2,2,4,4,4,4,1,3],
+   [2,1,4,4,4,4,2,1],
+   [2,2,4,2,2,4,2,2]
+]
+
 ASCII_TO_NUMBER = {
   '_': 0,
   '_': 1,
@@ -239,6 +249,7 @@ IMAGES = {
   'gliders': GLIDERS,
   'heart' : HEART, 
   'heart_shiny' : HEART_SHINY,
+  'creeper' : CREEPER
 }
 
 SHELLS = {
@@ -500,7 +511,7 @@ def main():
     output_filename = 'gitfiti.{}'.format(SHELLS[shell])
     save(output, output_filename)
     print('{} saved.'.format(output_filename))
-    print('Create a new(!) repo named {0} at {1} and run the script'.format(repo, git_base))
+    print('Create a new(!) repo named {0} on {1} and run the script generated'.format(repo, git_base))
 
 
 if __name__ == '__main__':
